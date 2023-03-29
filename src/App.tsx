@@ -1,10 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { Button } from './components/Button'
+
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './styles/themes/default'
+import { GlobalStyle } from './styles/global'
 
 export function App() {
   return (
-    <div className="App">
-      <h1>hello world</h1>
-    </div>
-  );
+    <ThemeProvider theme={defaultTheme}>
+      <Button variant="primary" />
+      <Button variant="secondary" />
+      <Button variant="danger" />
+      <Button variant="sucess" />
+      <GlobalStyle />
+    </ThemeProvider>
+  )
 }
